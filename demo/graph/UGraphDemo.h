@@ -18,6 +18,7 @@
 #include <iostream>
 #include <iomanip>
 #include "graph/UGraphModel.h"
+#include "graph/UGraphAlgorithm.h"
 using namespace std;
 
 
@@ -29,6 +30,8 @@ string vertex2str(string& item){
 }
 
 void ugraphDemo1(){
+    cout << "\n\n============ Running UGraph Demo 1 ============\n\n";
+
     UGraphModel<string> model(&strEQ, &vertex2str);
     
     model.add("HCM");
@@ -54,6 +57,8 @@ string char2str(char& item){
 }
 
 void ugraphDemo2(){
+    cout << "\n\n============ Running UGraph Demo 2 ============\n\n";
+
     UGraphModel<char> model(&charEQ, &char2str);
     model.add('A');
     model.add('B');
@@ -87,6 +92,8 @@ void ugraphDemo2(){
 
 
 void ugraphDemo3(){
+    cout << "\n\n============ Running UGraph Demo 3 ============\n\n";
+
     UGraphModel<char> model(&charEQ, &char2str);
     model.add('A');
     model.add('B');
@@ -114,6 +121,12 @@ void ugraphDemo3(){
     UGraphAlgorithm<char> mst;
     UGraphModel<char> tree = mst.minSpanningTree(&model);
     tree.println();
+}
+
+void runAllUGraphDemos() {
+    ugraphDemo1();
+    ugraphDemo2();
+    ugraphDemo3();
 }
 
 

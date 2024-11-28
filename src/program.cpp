@@ -8,18 +8,26 @@ using namespace std;
 namespace fs = std::filesystem;
 
 #include "list/listheader.h"
+#include "graph/AbstractGraph.h"
+#include "graph/IGraph.h"
+#include "graph/DGraphModel.h"
+#include "graph/UGraphModel.h"
 
-// XXX DEMO DGraphModel
 #include "graph/DGraphDemo.h"
-// TODO Add new functions and classes to run UGraphDemo
-// #include "demo/graph/UGraphDemo.h" 
-
-// NOTE: Để chạy demo, mở terminal chạy WSL, sau đó gõ vào lệnh "./compilation-command.sh" và đợi G++ compile. 
-//       Gõ "./program" để chạy demo sau khi đã compile xong
+#include "graph/UGraphDemo.h"
 
 int main(int argc, char** argv) {
+    //dataloader:
+    //case_data_wo_label_1();
+    //case_data_wi_label_1();
+    //case_batch_larger_nsamples();
+    
+    //Classification:
+    // twoclasses_classification();
+    //threeclasses_classification();
 
     runAllDGraphDemos();
- 
+    runAllUGraphDemos();
+
     return 0;
 }
