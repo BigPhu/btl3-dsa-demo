@@ -9,4 +9,4 @@ Trước khi chạy các demo, bạn phải thêm source code của các hàm t�
   ```
   ./compilation-command.sh
   ```
-Sau khi thực hiện các bước trên, kết quả của lần chạy demo sẽ được lưu vào file __output.txt__, bạn có thể so sánh nó với file __reference_otput.txt__ (chỉ mang giá trị tham khảo)
+Sau khi thực hiện các bước trên, kết quả của lần chạy demo gần nhất sẽ được lưu vào file __output.txt__, bạn có thể so sánh nó với file __reference_output.txt__ (chỉ mang giá trị tham khảo)
