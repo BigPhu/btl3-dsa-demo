@@ -1,6 +1,6 @@
 Trước khi chạy các demo, bạn phải thêm source code của các hàm tương ứng tại các vị trí có __TODO__ trong __DLinkedList.h__, __AbstractGraph.h__, __DGraphModel.h__ và __UGraphModel.h__.
 Để bắt đầu chạy các demo, hãy thực hiện các bước sau:
-- Mở terminal (trong VSCode bấm tổ hợp phím __Ctrl__ + __Shift__ + __`__
+- Mở terminal (trong VSCode bấm tổ hợp phím __Ctrl__ + __Shift__ + __`__)
 - Khởi động Windows Subsystem for Linux bằng lệnh sau
   ```
   wsl
