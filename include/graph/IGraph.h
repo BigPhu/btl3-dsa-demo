@@ -20,32 +20,35 @@ using namespace std;
 
 #include "list/DLinkedList.h"
 
-
-class VertexNotFoundException: public std::exception{
+class VertexNotFoundException : public std::exception {
 private:
-    string vertex;
+    std::string vertex;
+    std::string message; // Store the error message
 public:
-    VertexNotFoundException(string vertex){
-        this->vertex = vertex;
-    }
-    const char * what () const throw (){
-        stringstream os;
+    VertexNotFoundException(const std::string& vertex) : vertex(vertex) {
+        std::stringstream os;
         os << "Vertex (" << this->vertex << "): is not found";
-        return os.str().c_str();
+        message = os.str(); // Store the message
+    }
+
+    const char* what() const noexcept override {
+        return message.c_str(); // Return the stored message
     }
 };
 
-class EdgeNotFoundException: public std::exception{
+class EdgeNotFoundException : public std::exception {
 private:
-    string edge;
+    std::string edge;
+    std::string message; // Store the error message
 public:
-    EdgeNotFoundException(string edge){
-        this->edge = edge;
+    EdgeNotFoundException(const std::string& edge) : edge(edge) {
+        std::stringstream os;
+        os << "Edge (" << this->edge << "): is not found";
+        message = os.str(); // Store the message
     }
-    const char * what () const throw (){
-        stringstream os;
-        os << "Edge (" << edge << "): is not found";
-        return os.str().c_str();
+
+    const char* what() const noexcept override {
+        return message.c_str(); // Return the stored message
     }
 };
 
