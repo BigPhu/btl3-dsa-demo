@@ -1,11 +1,7 @@
 #ifndef UGRAPH_ALGORITHM_H
 #define UGRAPH_ALGORITHM_H
 
-#include "UGraphModel.h"
-#include <unordered_map>
-#include <queue>
-#include <limits>
-#include <stdexcept>
+#include "graph/graphheader.h"
 
 template <class T>
 class UGraphAlgorithm {

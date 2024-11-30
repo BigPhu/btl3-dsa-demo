@@ -1,13 +1,7 @@
 #ifndef TOPOSORTER_H
 #define TOPOSORTER_H
 
-#include <unordered_map>
-#include <queue>
-#include <stack>
-#include <stdexcept>
-
-#include "graph/DGraphModel.h"
-#include "list/DLinkedList.h"
+#include "graph/graphheader.h"
 
 template <class T>
 class TopoSorter {

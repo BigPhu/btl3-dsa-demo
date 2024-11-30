@@ -1,18 +1,7 @@
 #ifndef DGRAPH_ALGORITHM_H
 #define DGRAPH_ALGORITHM_H
 
-#include <limits>
-#include <queue>
-#include <unordered_map>
-#include <sstream>
-#include <string>
-
-// Correct forward declaration of DGraphModel as a template class
-template <class T>
-class DGraphModel;
-
-#include "graph/DGraphModel.h"
-#include "list/DLinkedList.h"
+#include "graph/graphheader.h"
 
 template <class T>
 class Path {
@@ -43,11 +32,14 @@ public:
     }
 };
 
-// CREDIT TO: HatakekkSheeshh @ https://github.com/HatakekkSheeshh
 template <class T>
 class DGraphAlgorithm {
 public:
     DLinkedList<Path<T>*> dijkstra(DGraphModel<T>* graph, T startVertex) {
+        if (!graph) {
+            throw std::invalid_argument("Graph pointer is null.");
+        }
+
         DLinkedList<Path<T>*> paths;
         std::unordered_map<T, Path<T>*> pathMap;
 

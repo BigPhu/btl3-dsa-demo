@@ -18,7 +18,9 @@
 #include <iostream>
 #include <iomanip>
 #include "graph/UGraphModel.h"
-#include "graph/UGraphAlgorithm.h"
+
+// TODO Remove the following includes when done
+#include "algorithm/UGraphAlgorithm.h"
 using namespace std;
 
 

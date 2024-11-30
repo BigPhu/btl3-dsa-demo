@@ -16,8 +16,8 @@
 #include "graph/DGraphModel.h"
 
 // TODO Remove the following includes when done
-#include "graph/DGraphAlgorithm.h"
-#include "graph/TopoSort.h"
+#include "algorithm/DGraphAlgorithm.h"
+#include "algorithm/TopoSort.h"
 
 bool charComparator(char& lhs, char& rhs){
     return lhs==rhs;
